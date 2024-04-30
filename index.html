@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="tab-completion">
+        <h3>Tab Completion</h3>
+        <p><em>p#hello-text{Hello World}</em></p>
+        <p id="hello-text">Hello World</p>
+    </div>
+
+    <div id="wrapping-with-abbreviation">
+        <h3>Wrapping With Abbreviation</h3>
+        <p><em>#text-wrapper>p#wrapped-text{This is wrapped text with Emmet Abbreviation!}</em></p>
+        <div id="text-wrapper">
+            <p id="wrapped-text">This is wrapped text with abbreviation!</p>
+        </div>
+    </div>
+
+    <div id="wrapping-individual-lines">
+        <h3>Wrapping Individual Lines</h3>
+        <h5>Original List</h5>
+        About
+        News
+        Products
+        Contacts
+        <h5>Wrapped List</h5>
+        <p><em>nav>ul#links>li.link$*</em></p>
+        <nav>
+            <ul id="links">
+                <li class="link">About</li>
+                <li class="link">News</li>
+                <li class="link">Products</li>
+                <li class="link">Contacts</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="removing-list-markers">
+        <h3>Removing List Markers</h3>
+        <h5>Original List</h5>
+        <li>* Unordered item 1</li>
+        <li>* Unordered item 2</li>
+        <li>* Unordered item 3</li>
+        <h5>Modified List</h5>
+        <p><em>ul#nav>li.nav-link*|t</em></p>
+        <ul id="nav">
+            <li class="nav-link">Unordered item 1</li>
+            <li class="nav-link">Unordered item 2</li>
+            <li class="nav-link">Unordered item 3</li>
+        </ul>
+    </div>
+
+    <div id="controlling-output-position">
+        <h5>Original List</h5>
+        <li>Buy</li>
+        <li>Sell</li>
+        <li>Inventory</li>
+        <h5>Controlled List</h5>
+        <p><em>nav>li*+(li{Contact}>ol>li{Email}+li{Hours of Operation}+li{Phone})</em></p>
+        <nav>
+            <li>Buy</li>
+            <li>Sell</li>
+            <li>Inventory</li>
+            <li>Contact
+                <ol>
+                    <li>Email</li>
+                    <li>Hours of Operation</li>
+                    <li>Phone</li>
+                </ol>
+            </li>
+        </nav>
+    </div>
+
+</body>
+</html>
